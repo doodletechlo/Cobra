@@ -1,0 +1,30 @@
+{
+  "name": "cobra-front-end",
+  "version": "1.0.0",
+  "homepage": "https://github.com/doodletechlo/cobra-front-end",
+  "authors": [
+    "Esteban Leon <eleon182@gmail.com>"
+  ],
+  "description": "Agile Tool",
+  "main": "app.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "angular-animate": "~1.4.0",
+    "angular-sanitize": "~1.4.0",
+    "angular-route": "~1.4.0"
+  }
+}
