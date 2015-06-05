@@ -34,29 +34,5 @@ function getRoutes() {
             title: 'Home',
             templateUrl: '/app/pages/home/home.html'
         }
-    }, {
-        url: '/search',
-        config: {
-            title: 'Search',
-            templateUrl: '/app/pages/search/search.html'
-        }
-    }, {
-        url: '/oow',
-        config: {
-            title: 'OOW Answers',
-            templateUrl: '/app/pages/oow/oow.html'
-        }
-    }, {
-        url: '/registration',
-        config: {
-            title: 'Create Users',
-            templateUrl: '/app/pages/registration/registration.html'
-        }
-    }, {
-        url: '/userdb',
-        config: {
-            title: 'User Database',
-            templateUrl: '/app/pages/userdb/userdb.html'
-        },
     }];
 }
