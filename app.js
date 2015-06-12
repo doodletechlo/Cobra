@@ -10,7 +10,7 @@ var api = require('./server/api-routes');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, ''));
 app.set('view engine', 'jade');
 
 //app.use(logger('dev'));
@@ -22,19 +22,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res, next) {
-    res.render('index');
+    res.sendFile('public/index.html');
 });
 app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    res.status(err.status);
-    res.render('error', {
-        message: err.message,
-        error: err
-    });
+    res.sendFile('public/error404.html');
 });
 
 module.exports = app;

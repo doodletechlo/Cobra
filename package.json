@@ -8,7 +8,7 @@
   "scripts": {
     "start": "nodemon -e js,scss --exec sh ./bin/serve.sh",
     "debug": "DEBUG=main nodemon -e js,scss --exec sh ./bin/serve.sh",
-    "prod": "PORT=80 nodemon ./bin/www",
+    "prod": "PORT=80 ./bin/www",
     "bower": "bower install"
   },
   "dependencies": {
