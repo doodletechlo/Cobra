@@ -6,10 +6,9 @@
   "author": "Esteban Leon",
   "private": true,
   "scripts": {
-    "start": "nodemon -e js,scss --exec sh ./bin/serve.sh",
-    "debug": "DEBUG=main nodemon -e js,scss --exec sh ./bin/serve.sh",
-    "prod": "PORT=80 ./bin/www",
-    "bower": "bower install"
+    "start": "nodemon -e js,scss --exec sh ./cobra-start.sh",
+    "debug": "DEBUG=main nodemon -e js,scss --exec sh ./cobra-start.sh",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "async": "^0.9.0",

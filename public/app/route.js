@@ -1,4 +1,4 @@
-var app = angular.module('main', [
+var app = angular.module('cobraApp', [
     // Angular modules
     'ngAnimate', // animations
     'ngRoute', // routing
