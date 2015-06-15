@@ -8,7 +8,7 @@
   "scripts": {
     "start": "nodemon -e js,scss --exec sh ./cobra-start.sh",
     "debug": "DEBUG=main nodemon -e js,scss --exec sh ./cobra-start.sh",
-    "postinstall": "bower install"
+    "postinstall": "bower install && ln -sfn ../../.pre-commit .git/hooks/pre-comit"
   },
   "dependencies": {
     "async": "^0.9.0",

@@ -1,0 +1,2 @@
+git log --pretty=oneline -10 > public/version.html
+git add public/version.html
