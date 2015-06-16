@@ -6,10 +6,10 @@
   "author": "Esteban Leon",
   "private": true,
   "scripts": {
-    "start": "nodemon -e js,scss --exec sh ./cobra-start.sh",
-    "debug": "DEBUG=main nodemon -e js,scss --exec sh ./cobra-start.sh",
+    "start": "nodemon -e js,scss --exec sh bin/execute.sh",
+    "debug": "DEBUG=main nodemon -e js,scss --exec sh bin/execute.sh",
     "postinstall": "bower install && ln -sfn ../../.pre-commit .git/hooks/pre-commit",
-    "deploy": "./deploy.sh"
+    "deploy": "bin/deploy.sh"
   },
   "dependencies": {
     "async": "^0.9.0",
