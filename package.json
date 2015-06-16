@@ -8,8 +8,7 @@
   "scripts": {
     "start": "nodemon -e js,scss --exec sh bin/execute.sh",
     "debug": "DEBUG=main nodemon -e js,scss --exec sh bin/execute.sh",
-    "postinstall": "bower install && ln -sfn ../../.pre-commit .git/hooks/pre-commit",
-    "deploy": "bin/deploy.sh"
+    "postinstall": "bower install"
   },
   "dependencies": {
     "async": "^0.9.0",
