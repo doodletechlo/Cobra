@@ -22,12 +22,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res, next) {
-    res.sendFile('public/index.html');
+    res.sendFile('/public/index.html');
 });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    res.sendFile('public/error404.html');
+    res.sendFile('/public/error404.html');
 });
 
 /**
