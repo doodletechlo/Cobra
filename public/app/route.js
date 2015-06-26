@@ -20,5 +20,12 @@ function getRoutes() {
             title: 'Home',
             templateUrl: '/app/pages/home/home.html'
         }
+    }, {
+        url: '/:page',
+        config: {
+            templateUrl: function (params) {
+                return '/app/pages/' + params.page + '/' + params.page + '.html';
+            }
+        }
     }];
 }
