@@ -1,21 +1,7 @@
-var app = angular.module('cobraApp', [
-    // Angular modules
-    'ngAnimate', // animations
-    'ngRoute', // routing
-    'ngSanitize',
-
-]);
-
-app.run(['$q', '$rootScope',
-    function($q, $rootScope) {
-
-    }
-]);
-
 // Collect the routes
-app.constant('myroutes', getRoutes());
+angular.module('cobraApp').constant('myroutes', getRoutes());
 // Configure the routes and route resolvers
-app.config(['$routeProvider', 'myroutes', routeConfigurator]);
+angular.module('cobraApp').config(['$routeProvider', 'myroutes', routeConfigurator]);
 
 function routeConfigurator($routeProvider, routes) {
 
