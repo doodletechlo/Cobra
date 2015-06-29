@@ -9,6 +9,20 @@ var debug = require('debug')('registration:server');
 
 var app = express();
 
+// view engine setup
+app.set('views', path.join(__dirname, ''));
+app.set('view engine', 'jade');
+
+app.use('/api', function(req, res) {
+    var url = 'http://de74xyk8y8kp9.cloudfront.net';
+    if(process.env.ENV === 'local') {
+        url = 'http://localhost:3005';
+    }
+    url = url + '/api' + req.url;
+    console.log(url);
+    req.pipe(request(url)).pipe(res);
+});
+
 //app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -18,19 +32,19 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res, next) {
-    res.sendFile('public/index.html');
+    res.sendFile(path.join(__dirname,'public/index.html'));
 });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    res.sendFile('public/error404.html');
+    res.sendFile(path.join(__dirname,'public/error404.html'));
 });
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3003');
+var port = normalizePort(process.env.PORT || '3004');
 app.set('port', port);
 
 /**
