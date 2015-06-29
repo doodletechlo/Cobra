@@ -17,8 +17,8 @@ function getRoutes() {
     return [{
         url: '/',
         config: {
-            title: 'Home',
-            templateUrl: '/app/pages/home/home.html'
+            title: 'Login',
+            templateUrl: '/app/pages/login/login.html'
         }
     }, {
         url: '/:page',

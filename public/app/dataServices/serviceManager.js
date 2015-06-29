@@ -1,5 +1,5 @@
 angular.module('cobraApp').factory('serviceManager', serviceManager);
-homeCtrl.$inject = ['$http', '$q'];
+serviceManager.$inject = ['$http', '$q'];
 
 function serviceManager($http, $q) {
     var authorization;

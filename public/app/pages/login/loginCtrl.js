@@ -1,7 +1,7 @@
 angular.module('cobraApp').controller('loginCtrl', loginCtrl);
-homeCtrl.$inject = ['$scope', '$http', '$timeout', '$q'];
+loginCtrl.$inject = ['$scope', 'loginService', '$location'];
 
-function loginCtrl($scope, loginService) {
+function loginCtrl($scope, loginService, $location) {
     $scope.fields = {
         username: '',
         password: ''
@@ -11,7 +11,7 @@ function loginCtrl($scope, loginService) {
         console.log($scope.fields);
         loginService.postLogin($scope.fields.username, $scope.fields.password).then(
             function success(response) {
-                console.log('Done!');
+                $location.url('/dashboard');
             },
             function error(response) {
                 console.log('error');

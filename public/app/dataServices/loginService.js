@@ -1,5 +1,5 @@
 angular.module('cobraApp').factory('loginService', loginService);
-homeCtrl.$inject = ['serviceManager', '$q'];
+loginService.$inject = ['serviceManager', '$q'];
 
 function loginService(serviceManager, $q) {
     return {
@@ -16,9 +16,10 @@ function loginService(serviceManager, $q) {
         serviceManager.makeRequest('login', 'POST', urlEncodedLogin).then(
             function success(response) {
                 serviceManager.setAuth(response.data.token);
+                deferred.resolve();
             },
             function error(response) {
-
+                deferred.reject(response);
             }
         );
 
