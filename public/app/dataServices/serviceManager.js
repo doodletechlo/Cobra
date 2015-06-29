@@ -11,21 +11,21 @@ function serviceManager($http, $q) {
 
     function makeRequest(path, method, data) {
         var requestObject = {
-            url: '/api/' + path,
+            url: 'http://de74xyk8y8kp9.cloudfront.net/api/' + path,
             method: method
         };
         var headers = {};
         if (data) {
             if (typeof data === 'object') {
-                header['content-type'] = 'application/json';
+                headers['content-type'] = 'application/json';
             } else if (typeof data === 'string') {
-                header['content-type'] = 'x-www-form-urlencoded';
+                headers['content-type'] = 'x-www-form-urlencoded';
             }
 
             requestObject.data = data;
         }
         if (authorization) {
-            header.authorization = authorization;
+            headers.authorization = authorization;
         }
         requestObject.headers = headers;
 

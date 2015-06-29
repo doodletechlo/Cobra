@@ -9,7 +9,10 @@ function loginService(serviceManager, $q) {
     function postLogin(username, password) {
         var deferred = $q.defer();
 
-        var urlEncodedLogin = 'username=' + username + '&password=' + password;
+        var urlEncodedLogin = {
+            username: username,
+            password: password
+        };
         serviceManager.makeRequest('login', 'POST', urlEncodedLogin).then(
             function success(response) {
                 serviceManager.setAuth(response.data.token);

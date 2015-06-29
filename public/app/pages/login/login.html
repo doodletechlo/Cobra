@@ -1,3 +1,14 @@
 <div ng-controller='loginCtrl as vm' ng-init="init()">
     Cobra Login
+    <form name="loginForm" ng-submit="submitLogin(loginForm)">
+        <label>
+            Username:
+            <input ng-model="fields.username"/>
+        </label>
+        <label>
+            Password:
+            <input ng-model="fields.password"/>
+        </label>
+        <button type="submit">Sign In</button>
+    </form>
 </div>
