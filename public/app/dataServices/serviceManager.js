@@ -11,7 +11,7 @@ function serviceManager($http, $q) {
 
     function makeRequest(path, method, data) {
         var requestObject = {
-            url: 'http://de74xyk8y8kp9.cloudfront.net/api/' + path,
+            url: '/api/' + path,
             method: method
         };
         var headers = {};
