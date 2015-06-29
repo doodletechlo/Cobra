@@ -7,6 +7,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon -e js,scss --exec sh bin/execute.sh",
+    "dev": "nodemon -e js,scss --exec sh bin/execute.sh",
+    "local": "ENV=local nodemon -e js,scss --exec sh bin/execute.sh",
     "debug": "DEBUG=main nodemon -e js,scss --exec sh bin/execute.sh",
     "postinstall": "bower install"
   },

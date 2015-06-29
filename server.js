@@ -13,6 +13,16 @@ var app = express();
 app.set('views', path.join(__dirname, ''));
 app.set('view engine', 'jade');
 
+app.use('/api', function(req, res) {
+    var url = 'http://de74xyk8y8kp9.cloudfront.net';
+    if(process.env.ENV === 'local') {
+        url = 'http://localhost:3005';
+    }
+    url = url + '/api' + req.url;
+    console.log(url);
+    req.pipe(request(url)).pipe(res);
+});
+
 //app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -34,7 +44,7 @@ app.use(function(req, res, next) {
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3003');
+var port = normalizePort(process.env.PORT || '3004');
 app.set('port', port);
 
 /**
