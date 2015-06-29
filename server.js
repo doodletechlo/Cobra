@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var request = require('request');
 var http = require('http');
-var debug = require('debug')('registration:server');
+var debug = require('debug')('main');
 
 var app = express();
 
@@ -19,7 +19,7 @@ app.use('/api', function(req, res) {
         url = 'http://localhost:3005';
     }
     url = url + '/api' + req.url;
-    console.log(url);
+    debug('Request: ' +url);
     req.pipe(request(url)).pipe(res);
 });
 
