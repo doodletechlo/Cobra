@@ -1,0 +1,48 @@
+.page--centered-content {
+    display: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #e8e8e8;
+
+    .page__cc-table-container {
+        display: table;
+        height: 100%;
+        margin: auto;
+        width: 100%;
+    }
+
+    .page__cc-cell-container {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .page__cc-box {
+        background: #f8f8f8;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        margin: auto;
+        padding: 16px;
+        width: 600px;
+        text-align: center;
+        transition: box-shadow .4s;
+
+        hr {
+            border-color: #e0e0e0;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        &:hover {
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+
+    .btn-centered {
+        display: block;
+        margin: 0 auto 12px auto;
+        width: 100px;
+    }
+}

@@ -1,0 +1,40 @@
+<div ng-controller="registrationCtrl as vm" class="page_registration page--centered-content">
+    <div class="page__cc-table-container">
+        <div class="page__cc-cell-container">
+            <div class="page__cc-box">
+                <form name="registrationForm" ng-submit="submitRegistration(registrationForm)" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Full Name</label>
+                        <div class="col-sm-9">
+                            <input name="name" ng-model="fields.name" class="form-control" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" class="col-sm-3 control-label">Username</label>
+                        <div class="col-sm-9">
+                            <input name="username" ng-model="fields.username" class="form-control" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">Password</label>
+                        <div class="col-sm-9">
+                            <input name="password" ng-model="fields.password" class="form-control" type="password" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input name="email" ng-model="fields.email" class="form-control" type="email" />
+                        </div>
+                    </div>
+
+                    <hr />
+                    <button type="submit" class="btn btn-default btn-centered">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

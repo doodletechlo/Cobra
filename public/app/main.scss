@@ -6,4 +6,6 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+@import 'pages/pages';
 @import 'pages/login/login';
+@import 'pages/registration/registration';

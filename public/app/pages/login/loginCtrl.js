@@ -8,14 +8,12 @@ function loginCtrl($scope, loginService, $location) {
     };
 
     $scope.submitLogin = function (form){
-        console.log($scope.fields);
         loginService.postLogin($scope.fields.username, $scope.fields.password).then(
             function success(response) {
                 $location.url('/dashboard');
             },
             function error(response) {
-                console.log('error');
-                console.log(response);
+                // TODO
             }
         );
     };
