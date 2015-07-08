@@ -12,8 +12,8 @@ function loginService(serviceManager, $q) {
         var urlEncodedLogin = {
             username: username,
             password: password
-        };
-        serviceManager.makeRequest('login', 'POST', urlEncodedLogin).then(
+         };
+        serviceManager.makeRequest('user/login', 'POST', urlEncodedLogin).then(
             function success(response) {
                 serviceManager.setAuth(response.data.token);
                 deferred.resolve();
