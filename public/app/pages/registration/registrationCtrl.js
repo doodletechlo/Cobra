@@ -1,7 +1,7 @@
 angular.module('cobraApp').controller('registrationCtrl', registrationCtrl);
-registrationCtrl.$inject = ['$scope', '$location'];
+registrationCtrl.$inject = ['$scope', '$location', 'registrationService'];
 
-function registrationCtrl($scope, $location) {
+function registrationCtrl($scope, $location, registrationService) {
     $scope.fields = {
         name: '',
         username: '',
@@ -10,6 +10,13 @@ function registrationCtrl($scope, $location) {
     };
 
     $scope.submitRegistration = function (form) {
-        console.log($scope.fields);
+        registrationService.postRegistration($scope.fields).then(
+            function onSuccess() {
+                $location.url('/dashboard');
+            },
+            function onError() {
+                // TODO: Handle error condition
+            }
+        );
     };
 }
