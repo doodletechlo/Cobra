@@ -1,7 +1,7 @@
 angular.module('cobraApp').factory('serviceManager', serviceManager);
-serviceManager.$inject = ['$http', '$q'];
+serviceManager.$inject = ['$http', '$q', '$location'];
 
-function serviceManager($http, $q) {
+function serviceManager($http, $q, $location) {
     // Attempt to get the authorization from sessionStorage
     var authorization = sessionStorage.getItem('auth') || null;
 
@@ -48,7 +48,7 @@ function serviceManager($http, $q) {
     }
 
     function setAuth(token) {
-        authorization = 'bearer ' + token;
+        authorization = token; //'bearer ' + token;
         sessionStorage.setItem('auth', authorization);
     }
 }

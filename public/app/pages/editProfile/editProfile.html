@@ -1,0 +1,24 @@
+<div ng-controller="editProfileCtrl as vm">
+    <p><span ng-bind="fields.name"></span> (<span ng-bind="fields.username"></span>)</p>
+    <p>Email: <span ng-bind="fields.email"></span></p>
+    <form name="updateEmailForm" ng-submit="updateEmail(updateEmailForm)">
+        <h5>Want to update your email?</h5>
+        <div class="form-group">
+            <label for="updateEmailField">New Email</label>
+            <input type="email" class="form-control" ng-model="fields.newEmail" id="updateEmailField" />
+        </div>
+        <button type="submit" class="btn btn-default">Submit New Email</button>
+    </form>
+    <form name="updatePasswordForm" ng-submit="updatePassword(updatePasswordForm)">
+        <h5>Want to update your password?</h5>
+        <div class="form-group">
+            <label for="updatePasswordField">New Password</label>
+            <input type="password" class="form-control" ng-model="fields.newPassword" id="updatePasswordField" />
+        </div>
+        <div class="form-group">
+            <label for="updatePasswordConfirm">Confirm Current Password</label>
+            <input type="password" class="form-control" ng-model="fields.currentPassword" id="updatePasswordConfirm" />
+        </div>
+        <button type="submit" class="btn btn-default">Submit New Password</button>
+    </form>
+</div>
